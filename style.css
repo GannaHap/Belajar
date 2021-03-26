@@ -1,0 +1,762 @@
+/* Google Font - Poppins */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  color: black;
+  font-family: 'Poppins', sans-serif;
+}
+
+/* Nav */
+nav {
+  height: 80px;
+  box-sizing: border-box;
+  padding: 0.5em 1em;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: 10;
+  transition: 1s all ease;
+}
+
+nav.show {
+  background-color: rgb(96, 96, 94);
+}
+
+.logo {
+  box-sizing: border-box;
+  width: 150px;
+}
+
+.logo img {
+  max-width: 400px;
+  display: block;
+}
+
+.menu ul {
+  width: 60vw;
+  display: flex;
+  justify-content: space-around;
+}
+
+.menu ul a {
+  color: white;
+  font-size: 1.2rem;
+  position: relative;
+}
+
+.menu ul a::after {
+  content: '';
+  height: 3px;
+  width: 0;
+  background-color: rgb(88, 208, 152);
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  transition: 0.5s;
+  border-radius: 5px;
+}
+
+.menu ul a:hover::after {
+  width: 100%;
+}
+
+.menu ul a.active::after {
+  content: '';
+  height: 3px;
+  width: 100%;
+  background-color: rgb(88, 208, 152);
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  border-radius: 5px;
+}
+
+.menu ul a.show {
+  color: white;
+}
+
+.menu-icons {
+  display: none;
+}
+
+/* Jumbotron  */
+.jumbotron {
+  position: relative;
+}
+
+.img-jumbotron {
+  height: 100vh;
+  width: 100%;
+  background-image: url('img/jumbotron.jpg');
+  background-size: cover;
+  filter: brightness(40%);
+}
+
+.text-jumbotron {
+  position: absolute;
+  top: 120px;
+  right: 0;
+  left: 0;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: 1fr;
+  justify-content: space-evenly;
+  align-items: center;
+  gap: 20px;
+  padding: 3em;
+}
+
+.info-jumbotron h2 {
+  font-weight: 500;
+  font-size: 2rem;
+  color: white;
+}
+
+.info-jumbotron p {
+  width: 500px;
+  color: white;
+}
+
+.info-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.info-button button {
+  width: 200px;
+  height: 75px;
+  background-color: rgb(88, 208, 152);
+  border-radius: 10px;
+  padding: 0.5em 1em;
+  color: white;
+  border: none;
+  border: 2px solid rgb(88, 208, 152);
+  outline: none;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+.info-button button:hover {
+  background-color: transparent;
+  color: rgb(88, 208, 152);
+}
+
+.waves {
+  position: absolute;
+  bottom: 0;
+}
+
+/* Layanan */
+.layanan {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.layanan h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.board-layanan {
+  width: 900px;
+  padding: 1em;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.card-layanan {
+  display: grid;
+  grid-template-rows: 2fr 3fr 1fr;
+  padding: 1em;
+  background-color: #fff;
+  box-shadow: 0 0 7px 0 rgba(0, 0, 0, 0.4);
+  border-radius: 10px;
+}
+
+.titleKelas h3 {
+  text-align: center;
+  font-size: 1.4rem;
+  font-weight: 600;
+}
+
+.titleKelas span {
+  text-align: center;
+  font-size: 1rem;
+  font-weight: 300;
+}
+
+.hargaKelas {
+  width: 100%;
+}
+
+.harga-top {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+/* Section Mid */
+.hargaAwal {
+  color: rgb(179, 176, 176);
+  text-decoration: line-through;
+  text-align: center;
+}
+
+.diskon {
+  text-align: center;
+  padding: 0.5em 0.8em;
+  border-radius: 50px;
+  background-color: rgb(84, 180, 156);
+  color: white;
+}
+
+.harga-bottom {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  font-weight: 500;
+  color: rgb(70, 93, 102);
+  font-size: 2.5rem;
+}
+
+.beli-kelas {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0.5em;
+}
+
+.beli-kelas button {
+  background-color: rgb(84, 180, 156);
+  border: none;
+  outline: none;
+  border-radius: 10px;
+  color: white;
+  padding: 0.4em 1em;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+.beli-kelas button:hover {
+  background-color: rgb(46, 148, 151);
+}
+
+/* Payment */
+.payment {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 1em;
+  box-sizing: border-box;
+  margin: 100px 0;
+}
+
+.payment h2 {
+  margin-bottom: 0;
+}
+
+.board-payment {
+  padding: 0.5em;
+  width: 900px;
+}
+
+.board-payment .owl-stage {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.board-payment img {
+  width: 200px;
+  filter: grayscale(1);
+  cursor: pointer;
+  transition: 0.5s all ease;
+}
+
+.payment img:hover {
+  transition: 0.5s all ease;
+  filter: grayscale(0);
+}
+
+/* About Us */
+.aboutUs {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 100px;
+}
+
+.aboutUs h2 {
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.aboutUs p {
+  width: 900px;
+  text-align: center;
+}
+
+/* Section Kualitas */
+.section-kualitas {
+  margin-top: 20px;
+  display: flex;
+  width: 900px;
+  padding: 1em;
+}
+
+.section-kualitas img {
+  width: 400px;
+  border-radius: 50%;
+}
+
+.detail-kualitas {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.fitur-kualitas {
+  display: grid;
+  grid-template-columns: 1fr 4fr;
+}
+
+.fitur-kualitas i {
+  display: flex;
+  justify-content: center;
+  padding-top: 0.2em;
+  font-size: 2.3rem;
+  color: rgb(91, 209, 148);
+}
+
+.fitur-text h3 {
+  font-size: 1.3rem;
+  font-weight: 600;
+}
+
+/* Board About Us */
+.board-aboutUs {
+  width: 900px;
+  margin-top: 20px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  padding: 2em;
+  box-sizing: border-box;
+}
+
+.card-aboutUs {
+  display: flex;
+  align-items: center;
+  background-color: #fff;
+  border-radius: 0px 0px 20px 0px;
+  padding: 0.4em 1em;
+  gap: 10px;
+}
+
+.card-aboutUs:hover {
+  box-shadow: 8px 8px 10px 0 rgba(0, 0, 0, 0.2), 0px 0px 10px 0 rgba(0, 0, 0, 0.2);
+}
+
+.icon-aboutUs {
+  width: 50px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  padding: 0.3em;
+  background-color: rgb(91, 209, 148);
+}
+
+.icon-aboutUs i {
+  font-size: 2rem;
+  color: white;
+}
+
+.text-card-aboutUs {
+  display: flex;
+  flex-direction: column;
+}
+
+.text-card-aboutUs span:nth-child(1) {
+  font-size: 1.2rem;
+  font-weight: 500;
+  color: rgb(22, 175, 96);
+}
+
+/* Review */
+.review {
+  padding: 1em;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 100px;
+}
+
+.review h2 {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.board-review {
+  width: 900px;
+  overflow: hidden;
+  padding: 1rem;
+  box-sizing: border-box;
+}
+
+.board-review .owl-stage {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card-review {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 50px;
+  padding: 0.5em;
+  box-sizing: border-box;
+}
+
+.card-review img {
+  width: 350px;
+  border-radius: 50%;
+}
+
+.card-review p {
+  font-size: 1.7rem;
+  font-weight: 200;
+  color: rgb(70, 93, 102);
+}
+
+/* Footer */
+footer {
+  background-color: rgb(51, 69, 77);
+  padding: 2em;
+  padding-bottom: 1em;
+}
+
+.footer-top {
+  display: flex;
+  justify-content: space-between;
+}
+
+.address {
+  padding-top: 0.5em;
+}
+
+.address h5 {
+  font-size: 1.3rem;
+  font-weight: 500;
+  color: white;
+}
+
+.address p {
+  width: 300px;
+  margin-top: 10px;
+  text-align: left;
+  font-weight: 300;
+  font-size: 1rem;
+  color: white;
+}
+
+.followUs {
+  padding: 0.5em;
+}
+
+.followUs h5 {
+  font-size: 1.2rem;
+  font-weight: 500;
+  color: white;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.sosmed-footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 25px;
+}
+
+.sosmed-footer a i {
+  font-size: 1.7rem;
+  color: white;
+}
+
+footer p {
+  text-align: center;
+  color: white;
+}
+
+/* Color Icon Sosmed */
+.fb-sosmed i:hover {
+  color: rgb(57, 86, 147);
+}
+
+.yt-sosmed i:hover {
+  color: rgb(255, 0, 0);
+}
+
+.ig-sosmed i:hover {
+  color: rgb(200, 68, 148);
+}
+
+.twitt-sosmed i:hover {
+  color: rgb(85, 172, 238);
+}
+
+/* Breakpoint 992px */
+@media screen and (max-width: 992px) {
+  .menu ul {
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 80px;
+    right: -100%;
+    background-color: rgb(77, 77, 76);
+    opacity: 1;
+    transition: 1s all ease;
+  }
+
+  .menu ul.show {
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 80px;
+    right: 0;
+    background-color: rgb(77, 77, 76);
+    opacity: 1;
+    transition: 1s all ease;
+  }
+
+  .menu ul a {
+    padding: 0.4em 1em;
+  }
+
+  .menu ul a:hover {
+    color: rgb(37, 134, 105);
+    background-color: rgb(236, 236, 236);
+  }
+
+  .menu ul a::after {
+    height: 0px;
+  }
+
+  .menu ul a.active::after {
+    height: 0px;
+  }
+
+  .menu ul.show a.active {
+    color: rgb(37, 134, 105);
+    background-color: rgb(236, 236, 236);
+  }
+
+  .menu-icons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+  }
+
+  .menu-icons i {
+    color: white;
+    font-size: 1.5rem;
+  }
+
+  .board-layanan {
+    width: 100%;
+    padding: 1em 2em;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    justify-content: center;
+    gap: 20px;
+    box-sizing: border-box;
+  }
+
+  .board-payment {
+    width: 100%;
+  }
+
+  .aboutUs p {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 0 2em;
+  }
+
+  .section-kualitas {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    justify-content: center;
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  .section-kualitas img {
+    width: 700px;
+  }
+
+  .board-aboutUs {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    justify-content: center;
+    padding: 2em 1em;
+  }
+
+  /* Review */
+
+  .board-review {
+    width: 100%;
+  }
+
+  .card-review {
+    gap: 30px;
+  }
+
+  .card-review img {
+    width: 250px;
+  }
+
+  .card-review p {
+    font-size: 1.4rem;
+  }
+}
+
+/* BreakPoints 768px*/
+@media screen and (max-width: 768px) {
+  .text-jumbotron {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+
+  .board-layanan {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    justify-content: center;
+    gap: 20px;
+  }
+
+  .section-kualitas img {
+    width: 500px;
+  }
+
+  .board-aboutUs {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .card-aboutUs {
+    display: flex;
+    justify-content: center;
+  }
+
+  /* Review */
+  .card-review img {
+    width: 220px;
+  }
+}
+
+/* Breakpoints 576px */
+@media screen and (max-width: 576px) {
+  .menu ul.show {
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 80px;
+    right: 0;
+    background-color: rgb(77, 77, 76);
+    opacity: 1;
+    transition: 1s all ease;
+  }
+
+  .info-jumbotron p {
+    text-align: justify;
+    width: 300px;
+  }
+
+  .aboutUs p {
+    text-align: left;
+  }
+
+  .section-kualitas img {
+    width: 400px;
+  }
+
+  .card-review {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  .footer-top {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .address {
+    margin-bottom: 25px;
+  }
+
+  .address p {
+    width: 240px;
+  }
+
+  .followUs {
+    width: 100%;
+    margin-bottom: 25px;
+  }
+}
+
+/* Breakpoints 480px */
+@media screen and (max-width: 480px) {
+  .board-layanan {
+    display: grid;
+    grid-template-columns: 1fr;
+    justify-content: center;
+    gap: 20px;
+    box-sizing: border-box;
+  }
+
+  .section-kualitas img {
+    width: 270px;
+  }
+
+  .board-aboutUs {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(1, 250px);
+  }
+
+  .card-aboutUs {
+    display: flex;
+    justify-content: flex-start;
+  }
+}
