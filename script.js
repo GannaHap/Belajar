@@ -99,7 +99,6 @@ let Data = {
 
 // Set Menu Icons
 $('.menu-icons').on('click', (icon) => {
-  console.log(icon);
   if (icon.target.classList.value === 'far fa-bars') {
     icon.target.remove();
     $('.menu-icons').append(`<i class="far fa-times"></i>`);
